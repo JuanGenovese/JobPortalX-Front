@@ -1,0 +1,37 @@
+:root{
+  --oxford-blue: #0a2647ff;
+  --jet: #333333ff;
+  --caribbean-current: #006b6bff;
+  --burgundy: #800020ff;
+  --battleship-gray: #7e8b8bff;
+  --battleship:rgba(114, 132, 153, 0.178);
+  --sub-white: rgb(255, 248, 248);
+  --avocado: #6b8e23ff;
+  --mustard: #ffdb58ff; 
+  ---black: hsla(0, 0%, 0%, 0.4);
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1c1c1c;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'letters';
+  src: url('./assets//font/Inconsolata-Regular.ttf');
+  font-weight: 400;
+}

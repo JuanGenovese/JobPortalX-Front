@@ -1,0 +1,93 @@
+.container{
+    max-width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1C1C1C;
+}
+.icon{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    color: black;
+    height: 25px;
+    margin-left: 18%;
+    margin-top: -35px;
+    width: 25px;
+}
+
+.containerData{
+    width: 50vw;
+    height: 40vh;
+    border: 3px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 3vh;
+}
+
+.title{
+    font-family: 'letters';
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.input, .inputPassword{
+    margin-right: 0.8vw;
+    width: 182px;
+    height: 47px;
+}
+
+.containerButtons{
+    width: 100%;
+    height: 10vh;
+    margin-top: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8vh
+}
+
+.button{
+    width: 182px;
+    height: 47px;
+    border-radius: 4px;
+    font-size:15px;
+    font-weight: 100;
+    margin: 0.8vh auto 0 auto
+}
+
+.containerRutaAlternativa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8vh;
+}
+
+.textoAlternativa, .textoLink{
+    font-family: 'letters';
+    font-size: 20px;
+}
+
+.textoAlternativa{
+    color: #fff;
+    margin-right: 0.8vw;
+}
+
+@media screen and (max-width: 1900px) {
+    .containerData{
+        height: 54vh;
+    }
+
+    .icon{
+        margin-left: 26vw;
+    }
+
+}
+

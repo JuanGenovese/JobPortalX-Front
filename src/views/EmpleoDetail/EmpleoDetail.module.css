@@ -1,0 +1,50 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+
+}
+
+.mainContainer2{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    margin-bottom: 5%;
+}
+
+.containerEmpleosRel{
+    margin-left: 1%;
+    width: 28%;
+    border: 3px solid var( --caribbean-current);
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;   
+    overflow-y: scroll;
+    max-height: 100vh;
+    color: var(--caribbean-current);
+    
+}
+
+.mainContainer3{
+    border: 3px solid var( --oxford-blue);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: fit-content;
+    color: var(--oxford-blue);
+    margin-left: 10%;
+}
+
+.containerButtons{
+    
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.containerDetail{
+    height: 100%;
+}

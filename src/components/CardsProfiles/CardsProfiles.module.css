@@ -1,0 +1,99 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    width: 30vw;
+    border-radius: 0 15%;
+    border: 5px solid #242424;
+    padding: 2%;
+    margin-top: 3vh;
+    color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.infoContainer{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: auto;
+    border-top: 3px solid var(--battleship-gray);
+    border-bottom: 3px solid var(--battleship-gray);
+    border-radius: 0%;
+    color: white;
+}
+
+.infoContainer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+    height: auto;
+    border-top: 3px solid var(--battleship-gray);
+    border-bottom: 3px solid var(--battleship-gray);
+    border-radius: 0%;
+    color: white;
+}
+
+.containerExperience{
+    width: 100%;
+}
+
+.containerIcons{
+    display: flex;
+}
+
+.img{
+    width: 8vw;
+    height: 13vh;
+    border: 4px solid #E1ECFC;
+    border-radius: 100%;
+    color: white;
+}
+
+.title{
+    margin-top: 2%;
+    color: var(--oxford-blue);
+    color: white;
+}
+
+.title2{
+    font-size: 100%;
+    margin-top: 1%;
+    color: var(--oxford-blue);
+    color: white;
+}
+
+.item{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 66%;
+    height: auto;
+    color: var(--oxford-blue);
+    background-color: #E1ECFC;
+}
+
+.text{
+    margin-top: 2%;
+}
+
+.skills{
+    margin-left: 1%;
+}
+
+.lupa{
+    margin-top: 10%;
+    margin-left: 100%;
+    font-size: 200%;
+}
+
+.linkedin{
+    margin-right: 25%;
+    margin-top: 7%;
+    font-size: 200%;
+}
+
+.linkedin :hover{
+    color: var(--oxford-blue);
+}
+

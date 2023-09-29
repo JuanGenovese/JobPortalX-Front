@@ -1,0 +1,164 @@
+.container{
+    margin-top: 17vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+.box{
+    position: relative;
+    width: 30vw;
+    height: 52vh;
+    background-color: rgb(83, 83, 83);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20vh;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, .8);
+}
+
+.box::before{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 20vw;
+    height: 60vh;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, #4a88cea9, #3a6aa1a9);
+    animation: animate 6s linear infinite;
+}
+
+.box::after{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 20vw;
+    height: 60vh;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, #4a88cea9, #3a6aa1a9);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+ 
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+} 
+
+.containerDetail{
+    position: absolute;
+    inset: 8px;
+    z-index: 2;
+    background-color: rgb(43, 43, 43);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.divContenedorInfo{
+    background-color: rgb(95, 95, 95);
+    padding: 5vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'letters';
+    border-radius: 20px;
+
+}
+
+.divFinalInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divContenedorInfo h2 {
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.p {
+    margin-bottom: 3vh;
+}
+
+.infoCard, .nameCard{
+    font-family: sans-serif;
+    color: #E1ECFC;
+}
+
+.infoCard{
+   font-family: 'letters';
+    font-size: 20px;
+} 
+
+.nameCard{
+    font-size: 30px;
+    font-family: 'letters';
+}
+
+.containerButton{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1vh;
+    margin-top: 10vh;
+}
+
+
+@media screen and (max-width: 1900px) {
+  
+    .box{
+        width: 40vw;
+        height: 72vh;
+    }
+    
+    .box::before{
+        top: -50%;
+        left: -50%;
+        width: 20vw;
+        height: 72vh;
+    }
+    
+    .box::after{
+        top: -50%;
+        left: -50%;
+        width: 20vw;
+        height: 72vh;
+
+    }
+    
+    .containerDetail{
+        height: 50vh;
+    }
+
+    .divContenedorInfo{
+        background-color: rgb(95, 95, 95);
+        padding: 5vh;
+        height: 69vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'letters';
+        border-radius: 20px;
+    
+    }
+
+}
+

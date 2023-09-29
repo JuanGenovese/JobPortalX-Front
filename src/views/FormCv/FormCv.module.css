@@ -1,0 +1,88 @@
+.containerMain{
+    display: flex;
+    background: #1C1C1C;
+    background-size: 400% 400%;
+    max-width: 100vw;
+    height: fit-content;
+    align-items: center;
+    padding: 0;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+}
+
+.containerFirst{
+    width: 30vw;
+    height: 100vh;
+    background-image: url('../../assets//img/cv.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    order: 2;
+}
+
+.containerSecond{
+    width: 70vw;
+    height: fit-content;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.step{
+    color: #fff;
+    font-family: 'letters';
+    font-weight: 400;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.circleContainer{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+}
+
+.highlighted {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #25476e, #1e3a5a, #172a41);
+}
+
+@media screen and (max-width: 1900px) {
+
+    .containerMain{
+      margin-bottom: 16vh;
+    }
+
+    .containerFirst{
+        width: 30vw;
+        height: 100vh;
+    
+    }
+    
+    .circleContainer{
+        margin: 14vh auto;
+    }
+
+    .container2{
+        height: 100vh;
+    
+    }
+
+}

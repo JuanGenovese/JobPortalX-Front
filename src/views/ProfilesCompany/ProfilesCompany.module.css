@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cardsContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3vw;
+    border-radius: 3px;
+    align-items: center;
+    min-height: fit-content;
+}
+
+.page{
+    margin-top: 7%;
+}
+

@@ -1,0 +1,66 @@
+.mainContainer {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background: linear-gradient(-40deg, var(--mustard), var(--avocado), white, var(--caribbean-current));
+    background-size: 400% 400%;
+    padding: 0;
+    margin: 0;
+    max-width: 100vw;
+    height: fit-content;
+    background: #1C1C1C;
+    color: #e1ecfc;
+    font-family: 'letters';
+}
+
+
+.Form {
+    background: linear-gradient(0deg, #25476e, #1e3a5a, #172a41);
+    color: #e1ecfc;
+    margin: auto;
+    height: fit-content;
+    background-color: var(--battleship-gray);
+    width: 80%;
+    border-radius: 10px;
+    padding: 1%;
+    font-size: large;
+    fill-opacity: 0.8;
+  }
+
+.title {
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    color: #e1ecfc;
+}
+
+.containerFirst {
+    width: 80vw;
+    height: 92vh;
+    background-image: url('../../assets/img/vacante.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    order: 2;
+}
+
+.containerSecond {
+    width: 90vw;
+    height: fit-content;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+  @keyframes container {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}

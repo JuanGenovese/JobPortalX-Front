@@ -1,0 +1,62 @@
+.button {
+    color: black;
+    padding: 1%;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    margin: 10vh auto;
+    z-index: 0;
+    overflow: hidden;
+    border: 1px solid var(--oxford-blue) ;
+    color: var(--jet);
+    font-family: 'letters';
+    font-size: 1em;
+    
+  }
+  .button:hover {
+    color:white;
+    font-size: 1em;
+    transition: all 0.3s ease;
+  }
+  .button:hover:after {
+    width: 100%;
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--jet);
+    
+  }
+
+  
+@media screen and (max-width: 1900px) {
+
+  .button {
+    color: black;
+    padding: 5%;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    margin: 10vh auto;
+    z-index: 0;
+    overflow: hidden;
+    border: 1px solid var(--oxford-blue) ;
+    color: var(--jet);
+    font-family: 'letters';
+    font-size: 1em;
+    
+  }
+
+}

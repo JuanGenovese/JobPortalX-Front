@@ -1,0 +1,104 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 87vh;
+}
+
+.Form {
+  margin: 0.5vh auto;
+  background: linear-gradient(0deg, #25476e, #1e3a5a, #172a41);
+  color: #e1ecfc;
+  width: 60%;
+  border-radius: 10px;
+  padding: 2%;
+  font-size: large;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor:pointer;
+  background-color: var(--sub-white);
+  border: solid black 2px;
+  width: 10vw;
+  height: 20vh;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+}
+
+.dropzone.active {
+  background-color: aqua;
+  border: solid black 2px;
+}
+
+.image{
+  width: 10vw;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.linkedinError{
+  font-size: 80%;
+  color: red;
+}
+
+
+
+
+
+.buttonCont {
+  position: relative;
+  width: min-content;
+  height: min-content;
+}
+
+.buttonCont:hover .tooltip {
+  display: block;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f1f1f1;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.buttonCont .tooltip::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1900px) {
+
+  .Form {
+    font-size: 1rem;
+  }
+
+  .dropzone {
+    width: 12vw;
+    height: 24vh;
+  }
+}
