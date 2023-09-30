@@ -7,13 +7,11 @@ export default function NavBar () {
     
 
     return (
-        <div className={style.fixed}>
-            <div className={style.container}>
-                <h2 className={style.title}><a href="/">JobPortalX</a></h2>
-                <div className={style.buttonsContainer}>
-                    <Button  onClick={() => navigate('/loginApplicant')} variant="outline-secondary" className="ms-auto">Iniciar sesion</Button>
-                    <Button onClick={() => navigate('/registro') } variant="secondary" className="ms-auto">Registrarme</Button>
-                </div>
+        <div className={style.container}>
+            <h2 className={style.title}><a href="/">JobPortalX</a></h2>
+            <div className={style.buttonsContainer}>
+                <Button  onClick={() => navigate('/loginApplicant')} variant="outline-secondary" className={style.buttonsContainerButton}>Iniciar sesion</Button>
+                <Button onClick={() => navigate('/registro') } variant="secondary" className={style.buttonsContainerButton}>Registrarme</Button>
             </div>
         </div>
     )

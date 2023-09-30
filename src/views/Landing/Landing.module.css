@@ -21,7 +21,6 @@
 
 .title{
     color: #fff;
-    font-family: 'letters';
     font-size: 4.5rem;
     font-weight: bold;
     margin-top: 8vh;
@@ -30,7 +29,6 @@
 
 .parrafo{
     color: #fff;
-    font-family: 'letters';
     font-size: 2.3rem;
     text-justify: center;
     margin-top: 8vh;
@@ -61,7 +59,6 @@ border-radius: 20px;
 
 .titleSecond{
     color: #fff;
-    font-family: 'letters';
     font-size: 3.2rem;
     text-justify: center;
     margin-bottom: 10vw;
@@ -95,7 +92,6 @@ border-radius: 20px;
 .titleThird{
     margin-top: 1vh;
     color: #fff;
-    font-family: 'letters';
     font-size: 4rem;
     font-weight: bold;
     text-justify: center;
@@ -104,7 +100,6 @@ border-radius: 20px;
 
 .parrafo2{
     color: #fff;
-    font-family: 'letters';
     font-size: 3rem;
     text-justify: center;
     margin-bottom: 4vh;
@@ -124,7 +119,6 @@ border-radius: 20px;
     margin: auto 1vw;
     padding-left: 10px;
     color: #fff;
-    font-family: 'letters';
     font-size: 2rem;
     text-justify: center;
     border-left: 8px solid #331460;
@@ -159,7 +153,6 @@ border-radius: 20px;
 .titleFourth{
     margin-top: 1vh;
     color: #fff;
-    font-family: 'letters';
     font-size: 3.5rem;
     font-weight: bold;
     text-justify: center;
@@ -168,7 +161,6 @@ border-radius: 20px;
 
 .parrafo3{
     color: #fff;
-    font-family: 'letters';
     font-size: 1.9rem;
     text-justify: center;
     margin-bottom: 4vh;
@@ -186,7 +178,6 @@ border-radius: 20px;
 
 .textoIcono{
     color: #fff;
-    font-family: 'letters';
     font-size: 1.2rem;
     text-justify: center;
     margin-bottom: 0.3vh;
@@ -282,7 +273,6 @@ border-radius: 20px;
 
     .textoIcono{
         color: #fff;
-        font-family: 'letters';
         font-size: 0.9rem;
         text-justify: center;
         margin-bottom: 0.4vh;

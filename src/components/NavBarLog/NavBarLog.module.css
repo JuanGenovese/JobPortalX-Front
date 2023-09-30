@@ -12,56 +12,48 @@
 }
 
 .container {
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
     background-color: #ececec;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
+.titleConteiner {
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    width: 20vw;
+    justify-content: space-around;
+    margin-left: 2vw;
+}
+
+.btnNav {
+    display: block;
+    border: 0;
+    font-size: 2.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btnNav:hover{
+    transition: 0.25s;
+    transform: translateX(-2.5px);
+}
 .title {
-    font-size: xx-large;
+    font-size: 2.5rem;
+    font-weight: bold;
     transition: 0.25s;
     cursor: pointer;
-    
+    padding: 2rem;
 }
 
 .title a {
     text-decoration: none;
     color: #1c1c1c; 
     cursor: pointer;
-}
-    
-.title a:hover {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.title:hover {
-    transition: 0.25s;
-    transform: translateX(-5px);
-    
-}
-
-.Botton {
-    height: 35px;
-    padding: 5px;
-    padding-left: 8px;
-    padding-right: 15px;
-    font-size:17px;
-    background-color: transparent;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    box-shadow: 
-    0px -2px 4px rgba(0, 0, 0, 0.3),
-    2px 0px 4px rgba(0, 0, 0, 0.3);
-    transition: 0.25s;
-}
-
-.Botton:active {
-    transition: 0.25s;
-    transform: translateY(3px);
 }
 
 @keyframes slideOut {
@@ -80,6 +72,36 @@
     to {
       transform: translateX(0);
     }
+}
+
+.abrirNav, .cerrarNav {
+    display: block;
+    border: 0;
+    font-size: 2.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 2vw;
+}
+
+.abrirNav {
+    color: #1c1c1c;
+    transition: 0.25s;
+}
+
+.abrirNav:hover{
+    transition: 0.25s;
+    transform: translateX(-5px);
+}
+
+.cerrarNav{
+    color: #E1ECFC;
+    transition: 0.25s;
+    margin-right: 0.5vw;
+}
+
+.cerrarNav:hover {
+    transition: 0.25s;
+    transform: translateX(5px);
 }
 
 .nav {
@@ -129,52 +151,39 @@
     gap: 1rem;
     flex-direction: column;
     align-items: flex-end;
+    margin-right: 1vw;
 }
 
-.navList li a {
-    text-decoration: none;
-    color: #E1ECFC;
-    font-size: xx-large;
-}
-.navList li{
+.cerrarSesion{
     color: #E1ECFC;
     transition: 0.5s;
     cursor: pointer;
+    align-content: end;
 }
-
-.navList li:hover {
+.cerrarSesion:hover {
     transform: translateX(-25px);
     transition: 0.5s;
+    text-decoration: none;
+} 
+.dashboard {
+    transition: 0.5s;
+    padding: 0;
+    text-align: end;
+}
+
+.dashboard a:hover {
+    text-decoration: none;
+    color: #ececec;
+}
+
+.dashboard:hover {
+    transform: translateX(-25px);
+    transition: 0.5s;
+    
 } 
 
 
-.abrirNav, .cerrarNav {
-    display: block;
-    border: 0;
-    font-size: 2.5rem;
-    background-color: transparent;
-    cursor: pointer;
-}
 
-.abrirNav {
-    color: #1c1c1c;
-    transition: 0.25s;
-}
-
-.abrirNav:hover{
-    transition: 0.25s;
-    transform: translateX(5px);
-}
-
-.cerrarNav{
-    color: #E1ECFC;
-    transition: 0.25s;
-}
-
-.cerrarNav:hover {
-    transition: 0.25s;
-    transform: translateX(-5px);
-}
 
 @media screen and (max-width: 890px) {
     .Input {
@@ -197,45 +206,10 @@
     }
 }
 
-.btnNav{
-    border-radius: 50%;
-    transition: all ease 0.4s;
-}
-
-.btnNav:hover{
-    background-color: #1a4e8a;
-    width: 2.5vw;
-    height: 5vh;
-}
-
-.btnNav:active{
-    background-color: #1a4e8a48;
-    width: 2vw;
-    height: 4vh;
-
-}
-
-.pathname{
-    font-family: 'letters';
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 @media screen and (max-width: 1900px) {
 
     .container {
         padding: 0.5rem;
-    }
-
-    .btnNav:hover{
-        width: 4.5vw;
-        height: 9vh;
-    }
-    
-    .btnNav:active{
-        width: 3vw;
-        height: 6vh;
-    
     }
     
 

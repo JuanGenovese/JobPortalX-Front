@@ -37,45 +37,44 @@ const NavBarCliente = ({ setValidateState, setCurrentUserStore2 }) => {
   return (
     <div className={`${style.fixed} ${isNavVisible ? style.fixedOpen : ""}`}>
       <div className={style.container}>
-        <h2 className={style.title}>
-          {
-          userLocalStorage?.profile === "Admin" 
-          ? (<a href="/">JobPortalX</a>) 
-          : userLocalStorage?.profile === "applicant" 
-            ? (<a href="/Applicant">JobPortalX</a>) 
-            : (<a href="/empresa">JobPortalX</a>)
+        <div className={style.titleConteiner}>
+          {location.pathname === '/'
+          ? <></>
+          : <button onClick={() => window.history.go(-1)} className={style.btnNav}><i className="bi bi-arrow-bar-left"></i></button>
           }
-        </h2>
-        {location.pathname === '/' ? 
-         <></>
-        : <button onClick={() => window.history.go(-1)} className={style.btnNav}><AiFillStepBackward /></button>
-        }
-
-        <span className={style.pathname}>{location.pathname ? Pathname({location, id}) : <></>}</span>
+          <h2 className={style.title}>
+            {
+            userLocalStorage?.profile === "Admin" 
+            ? (<a href="/">JobPortalX</a>) 
+            : userLocalStorage?.profile === "applicant" 
+              ? (<a href="/Applicant">JobPortalX</a>) 
+              : (<a href="/empresa">JobPortalX</a>)
+            }
+          </h2>
+        </div>
         <button className={style.abrirNav} onClick={abrirNav}>
-          <i className="bi bi-arrow-bar-right"></i>
+          <i class="bi bi-list"></i>
         </button>
         <div onClick={salirDeNav} className={`${style.restoContainer} ${isNavVisible ? style.restoContainerVisible : ""}`}></div>
         <nav className={`${style.nav} ${isNavVisible ? style.navVisible : ""}`}>
           <button className={style.cerrarNav} onClick={cerrarNav}>
-            <i className="bi bi-arrow-bar-left"></i>
+            <i className="bi bi-arrow-bar-right"></i>
           </button>
           <ul className={style.navList}>
             <li>
-              <h3 onClick={handlerLogin}>
-                Cerrar sesion
+              <h3 onClick={handlerLogin} className={style.cerrarSesion}>
+                cerrar sesion
               </h3>
+              {userLocalStorage?.profile === "Admin" 
+              ? 
+              (<h3 className={style.dashboard}>
+                <a href="https://jobportalx-adminpanel.vercel.app" target="_blank">
+                  dashboard
+                </a>
+              </h3>) 
+              : null}
             </li>
-            {userLocalStorage?.profile === "Admin" ? (
-              <li>
-                {<a
-                  href="https://jobportalx-adminpanel.vercel.app"
-                  target="_blank"
-                >
-                  Dashboard
-                </a>}
-              </li>
-            ) : null}
+
           </ul>
         </nav>
       </div>

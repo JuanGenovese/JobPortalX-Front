@@ -18,12 +18,10 @@ export default function LandingApplicant({ setValidateState, setCurrentUserStore
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.containerComponents}>
-          <NavBar
-            setValidateState={setValidateState}
-            setCurrentUserStore2={setCurrentUserStore2}
-          ></NavBar>
-        </div>
+        <NavBar
+          setValidateState={setValidateState}
+          setCurrentUserStore2={setCurrentUserStore2}
+        ></NavBar>
         <div className={styles.containerPrincipal}>
           <div className={styles.saludo}>
             <h1 className={styles.titulo}>{greeting}</h1>
