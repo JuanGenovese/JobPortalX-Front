@@ -1,287 +1,166 @@
-.landingDiv {
-    min-height: 100vh;
-    margin-bottom: 5vh;
-    overflow: hidden;
-}
-
-.containerFirst{
-    height: 90vh;
-    margin-top: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-}
-
-.containerBienvenida, .containerText{
-    width: 50vw;
-    height: 80vh;
-    margin-right: 10vw;
-}
-
-.title{
-    color: #fff;
-    font-size: 4.5rem;
-    font-weight: bold;
-    margin-top: 8vh;
-    text-justify: center;
-}
-
-.parrafo{
-    color: #fff;
-    font-size: 2.3rem;
-    text-justify: center;
-    margin-top: 8vh;
-}
-
-.containerLogo, .containerLogo2, .containerLogo3{
-    width: 30vw;
-    height: 76vh;
-}
-
-.imageFirst{
-border-radius: 20px;
-}
-.containerSecond{
+.containerFirst {
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.containerLogo2{
-    margin-right: 5vw;
-}
-
-.containerText{
-    margin-top: 6vh;
-    height: 90vh;
-}
-
-.titleSecond{
-    color: #fff;
-    font-size: 3.2rem;
-    text-justify: center;
-    margin-bottom: 10vw;
-}
-
-.imageSecond{
-    border-radius: 30px;
-}
-
-.containerThird{
-    height:60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerLogo3{
+.containerBienvenida {
     height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.imageThird{
-    width: 25vw;
-    height: 50vh;
-    margin-right: 8vw;
-}
-
-.containerText3{
-    margin: 0 4vw 6vw 10vw;
-}
-
-.titleThird{
-    margin-top: 1vh;
-    color: #fff;
+.title {
+    color: #ececec;
     font-size: 4rem;
     font-weight: bold;
-    text-justify: center;
-    margin-bottom: 6vh;
 }
 
-.parrafo2{
-    color: #fff;
-    font-size: 3rem;
-    text-justify: center;
-    margin-bottom: 4vh;
+.parrafo {
+    color: #ececec;
 }
 
-.containerOportunidades{
-    width: 100vw;
-    height: fit-content;
+.containerLogoFirst {
+    height: 100%;
+    width: 35%;
+}
+
+.imageFirst {
+    object-fit: cover;
+    height: 100%;
+}
+
+
+
+.containerSecond {
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.boxOportunidades{
-    width: 20%;
+.containerLogoSecond {
     height: 100%;
-    margin: auto 1vw;
-    padding-left: 10px;
-    color: #fff;
-    font-size: 2rem;
-    text-justify: center;
-    border-left: 8px solid #331460;
+    width: 35%;
 }
 
-.containerFourth{
-    height: 57vh;
-    margin-top: 20vh;
+.imageSecond {
+    object-fit: cover;
+    height: 100%;
+}
+
+.containerText {
+    height: 100%;
+    width: 65%;
+    color: #ececec;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.containerText4{
-    height: 100%;
-    width:60vw;
-    margin: 4vh 2vw 4vw 4vw;
+.titleSecond {
+    font-size: 2.5rem;
 }
 
-.containerLogo4{
-    width: 40vw;
-    height: 100%;
-}
-
-.imageFour{
-    width: 40vw;
-    height: 40vh;
-    margin: 0 0 0 2vw;
-    border-radius: 20px;
-}
-
-.titleFourth{
-    margin-top: 1vh;
-    color: #fff;
-    font-size: 3.5rem;
+.misionVision {
     font-weight: bold;
-    text-justify: center;
-    margin-bottom: 4vh;
+    font-size: 2.5rem;
+    margin: 0;
+    position: relative;
+    display: inline-block;
 }
 
-.parrafo3{
-    color: #fff;
-    font-size: 1.9rem;
-    text-justify: center;
-    margin-bottom: 4vh;
+.misionVision::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    bottom:0;
+    left: 0;
+    background-color: rgb(209, 209, 209);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
 }
 
-.containerLi{
-    list-style: none;
+.misionVision:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-.icono{
-    width: 1.3vw;
-    height: 3vh;
-    margin-right: 0.5vw;
+
+.containerThird {
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.textoIcono{
-    color: #fff;
-    font-size: 1.2rem;
-    text-justify: center;
-    margin-bottom: 0.3vh;
+.containerTextThird {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ececec;
 }
 
-@media screen and (max-width: 1900px) {
+.titleThird {
+    font-size: 2rem;
+    font-weight: bold;
+}
 
-    .containerFirst{
-        width: 100vw;
-        height: 90vh;
-        margin-top: 10vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.parrafo2 {
+    padding-bottom: 1rem;
+}
 
-    .containerBienvenida, .containerText{
-        width: 55vw;
-        height: 80vh;
-        margin-right: 10vw;
-    }
+.containerLogoThird {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .title{
-        font-size: 3rem;
-        margin: 2vh;
-    }
+.imageThird {
+    height: 60vh;
+    width: 60vh;
+}
 
-    .parrafo{
-        font-size: 1.7rem;
-        text-justify: center;
-        margin-top: 12vh;
-    }
+.containerFourth {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    color: #ececec;
+}
 
-    .containerLogo, .containerLogo2, .containerLogo3{
-        margin: auto 1vw;
-    }
+.imageFour {
+    object-fit: cover;
+    height: 50vh;
 
-    .containerText{
-        margin-top: 2vh;
-    }
+}
 
-    .titleSecond{
-        font-size: 2.5rem;
-        margin-bottom: 18vh;
-        margin-left: 4vw;
-    }
-
-    .titleThird{
-        margin-top: 10vh;
-        font-size: 2.5rem;
-        margin-bottom: 8vh;
-    }
-
-    .parrafo2{
-        font-size: 2rem;
-        margin-bottom: 8vh;
-    }
-
-    .containerOportunidades{
-        margin-top: 4vh;
-    }
-
-    .boxOportunidades{
-        width: 22%;
-        font-size: 1.4rem;
-    }
-
-    .containerFourth{
-        height: fit-content;
-        margin-top: 10vh;
-    }
-
-    .imageFour{
-        width: 35vw;
-        height: 35vh;
-        margin: 2vh 0 0 2vw;
-    }
-
-    .titleFourth{
-        margin-top: 4vh;
-        font-size: 2.4rem;
-        margin-bottom: 4vh;
-    }
-
-    .parrafo3{
-        font-size: 1.2rem;
-        margin-bottom: 4vh;
-    }
-
-    .containerLi{
-        width: 100%;
-    }
-
-    .textoIcono{
-        color: #fff;
-        font-size: 0.9rem;
-        text-justify: center;
-        margin-bottom: 0.4vh;
-    }
+.titleFourth {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
-
 }
 
+.span1 {
+    text-align: center;  
+    font-weight: bold;
+    margin-bottom: 2.5vh;
+}
 
-@media (max-width: 780px) {
-    
+.span2 {
+    text-align: center;  
 }
