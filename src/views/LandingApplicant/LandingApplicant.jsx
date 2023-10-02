@@ -6,15 +6,22 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getUserDetail } from '../../Redux/Actions/actionsFunction/actionsUsers'
 
-export default function LandingApplicant({ setValidateState, setCurrentUserStore2 }) {
+
+
+
+const LandingApplicant = ({ setValidateState, setCurrentUserStore2 }) => {
   const dispatch = useDispatch()
-  const userType2 = JSON.parse(localStorage.getItem("currentUser2"));
-  const [greeting, setGreeting] = useState(`¡Hola, ${userType2.name}!`);
+
+  const userType2 = JSON.parse( localStorage.getItem("currentUser2") );
+  const [ greeting , setGreeting ] = useState(`¡Hola, ${userType2.name}!`);
   const userCv = useSelector(state => state.UserDetail)
-  useEffect(()=>{
-    dispatch(getUserDetail(userType2.id))
-  }, [dispatch,userType2.id])
-  console.log(userCv.Cv);
+
+
+  useEffect(() => {
+    dispatch( getUserDetail(userType2.id) )
+  }, [ dispatch, userType2.id ])
+  
+
   return (
     <div>
       <NavBar
@@ -27,59 +34,53 @@ export default function LandingApplicant({ setValidateState, setCurrentUserStore
           <h3 className={styles.info}>Te damos la bienvenida a JobPortalX</h3>
         </div>
         <div className={styles.containerButtons}>
+          <Link to="/empleos">
+            <button className={styles.Button}>
+              <span className={styles.ButtonText}>POSTULAR</span>
+            </button>
+          </Link>
           <Link to="/postulaciones">
-            <button className={styles.Button} title="Mis postulaciones">
-              <span className={styles.ButtonIcon}></span>
+            <button className={styles.Button2} title="Mis postulaciones">
               <span className={styles.ButtonText}>MIS POSTULACIONES</span>
             </button>
           </Link>
           {
             userCv.Cv ? <></> : 
             <Link to="/registro-cv">
-            <button className={styles.Button2}>
-              <span className={styles.ButtonIcon}></span>
+            <button className={styles.Button}>
               <span className={styles.ButtonText}>CREAR CV</span>
             </button>
           </Link>
           }
+          <Link to="/PlansAndPrices">
+            <button className={styles.Button2}>
+              <span className={styles.ButtonText}>PLANES Y PRECIOS</span>
+            </button>
+          </Link>
           <Link to="/registro-experiencia">
             <button className={styles.Button}>
-              <span className={styles.ButtonIcon}></span>
               <span className={styles.ButtonText}>REGISTRAR EXPERIENCIA</span>
             </button>
-          </Link>
-          <Link to="/empleos">
-            <button className={styles.Button2}>
-              <span className={styles.ButtonIcon}></span>
-              <span className={styles.ButtonText}>VACANTES</span>
-            </button>
-          </Link>
+          </Link> 
           <Link to="/Miperfil">
-            <button className={styles.Button}>
-              <span className={styles.ButtonIcon}></span>
+            <button className={styles.Button2}>
               <span className={styles.ButtonText}>MI PERFIL</span>
             </button>
           </Link>
           <Link to="/profiles-company">
-            <button className={styles.Button2}>
-              <span className={styles.ButtonIcon}></span>
-              <span className={styles.ButtonText}>PERFILES EMPRESAS</span>
+            <button className={styles.Button}>
+              <span className={styles.ButtonText}>EMPRESAS</span>
             </button>
           </Link>
           <Link to="/registro-estudio">
-            <button className={styles.Button}>
-              <span className={styles.ButtonIcon}></span>
+            <button className={styles.Button2}>
               <span className={styles.ButtonText}>REGISTRAR EDUCACION</span>
             </button>
-          </Link>
-          <Link to="/PlansAndPrices">
-            <button className={styles.Button2}>
-              <span className={styles.ButtonIcon}></span>
-              <span className={styles.ButtonText}>PLANES Y PRECIOS</span>
-            </button>
-          </Link>
+          </Link> 
         </div>
       </div>
     </div>
   );
 }
+
+export default LandingApplicant;

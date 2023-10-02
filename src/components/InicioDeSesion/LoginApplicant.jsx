@@ -12,15 +12,17 @@ import { FiEye, FiEyeOff } from "react-icons/fi"
 
 const LoginApplicant = ({ setValidateState, setCurrentUserStore }) => {
   const valdiateUsers = useSelector((state) => state.Users);
-  const [ pass, setPass ] = useState(false)
-  const clientID =
-    "970075390910-oaut1poeo5kbmti73j5fm8t3mrpi8jk7.apps.googleusercontent.com";
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [applicant, setapplicant] = useState({
+  const clientID = "970075390910-oaut1poeo5kbmti73j5fm8t3mrpi8jk7.apps.googleusercontent.com";
+  const [ pass, setPass ] = useState(false)
+  const [ applicant, setapplicant ] = useState({
     email: "",
     password: "",
   });
+
+
+
   useEffect(() => {
     const start = () => {
       gapi.auth2.init({
@@ -30,12 +32,17 @@ const LoginApplicant = ({ setValidateState, setCurrentUserStore }) => {
     gapi.load("client:auth2", start);
     dispatch(getAllUsers());
   }, [dispatch]);
+
+
+
   const handlerChange = (event) => {
     setapplicant({
       ...applicant,
       [event.target.name]: event.target.value,
     });
   };
+
+
 
   const onSuccess = (response) => {
     const { email, googleId } = response.profileObj;
@@ -61,9 +68,15 @@ const LoginApplicant = ({ setValidateState, setCurrentUserStore }) => {
       }, 1500);
     }
   };
+
+
+
   const onFailure = () => {
     console.log("Something went wrong");
   };
+
+
+
   const filterUsers = (applicant) => {
     let filtro = {
       email: applicant.email,
@@ -78,6 +91,9 @@ const LoginApplicant = ({ setValidateState, setCurrentUserStore }) => {
     });
     return filter.length;
   };
+
+
+
   const filterBaned = (applicant) =>{
     let filtro = {
       email: applicant.email,
@@ -92,6 +108,9 @@ const LoginApplicant = ({ setValidateState, setCurrentUserStore }) => {
     });
     return filter.length;
   }
+
+
+
   const handlerSumit = () => {
     if(filterBaned(applicant) > 0){
       return Swal.fire({
@@ -116,10 +135,12 @@ const LoginApplicant = ({ setValidateState, setCurrentUserStore }) => {
     }
   };
 
+  
+
   return (
     <div className={style.container}>
       <div className={style.containerData}>
-        <h1 className={style.title}>Login Aplicante</h1>
+        <h1 className={style.title}>APPLICANT LOGIN</h1>
         <div className={style.containerInicio}>
           <input
             type="text"
@@ -148,6 +169,7 @@ const LoginApplicant = ({ setValidateState, setCurrentUserStore }) => {
               onSuccess={onSuccess}
               onFailure={onFailure}
               cookiePolicy={"single_host_policy"}
+              className={style.GoogleLogin}
             />
             <Link to="/loginCompany">
               <button className={style.button}>Iniciar como Empresa</button>
@@ -159,7 +181,7 @@ const LoginApplicant = ({ setValidateState, setCurrentUserStore }) => {
         <span className={style.textoAlternativa}>
           ¿Aún no te has registrado?
         </span>
-        <Link to="/newRegistroApplicant">
+        <Link to="/newRegistroApplicant" className={style.Link}>
           <span className={style.textoLink}>Registrarte</span>
         </Link>
       </div>
