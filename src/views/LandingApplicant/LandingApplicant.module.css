@@ -10,8 +10,8 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    background-image: url("/public/images/fondoApplicant.jpg");
-    background-position:center;
+    background-image: url("/public/images/FondoLoginApplicant.jpg");
+    background-position:top;
     background-size: cover;
     position: fixed;
     left: 0;
