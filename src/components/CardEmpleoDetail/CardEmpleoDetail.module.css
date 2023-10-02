@@ -1,7 +1,29 @@
 .mainContainer{
+    height: 75vh;
     display: flex;
     flex-direction: column;
+}
+
+.ConteinerImgTit {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+}
+
+.logo{   
+    margin-top: 5vh;
+    margin-left: 5vh;
+    width: 25vw;
+    height: 30vh;   
+    
+}
+
+.containerTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .container2{
@@ -9,21 +31,9 @@ align-self: baseline;
 width: 100%;
 }
 
-.containerTitle{
-    width: 100%;
-    align-self: center;
-    justify-self: center;
-}
 
-.logo{
-    
-        width: 260px;
-        height: 160px;
-        border: 4px solid var(--oxford-blue);
-        border-radius: 10%;
-        justify-self: center;
-        align-self: center;
-}
+
+
 
 .btn{
     background-color: var(--oxford-blue);

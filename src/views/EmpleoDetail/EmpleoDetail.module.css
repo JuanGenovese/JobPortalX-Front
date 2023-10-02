@@ -1,16 +1,22 @@
-.mainContainer{
-    display: flex;
-    flex-direction: column;
-    margin-top: 13%;
-
-}
-
 .mainContainer2{
-    height: 100vh;
+    margin-top: 15vh;
+    height: 85vh;
     display: flex;
     flex-direction: row;
-    height: fit-content;
-    margin-bottom: 5%;
+    align-items: center;
+}
+
+.mainContainer3{
+    width: 70vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerDetail{
+    height: 100%;
+    border: 2px solid red;   
 }
 
 .containerEmpleosRel{
@@ -23,19 +29,10 @@
     overflow-y: scroll;
     max-height: 100vh;
     color: var(--caribbean-current);
+    border: 2px solid red;
     
 }
 
-.mainContainer3{
-    border: 3px solid var( --oxford-blue);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-    height: fit-content;
-    color: var(--oxford-blue);
-    margin-left: 10%;
-}
 
 .containerButtons{
     
@@ -45,6 +42,3 @@
 }
 
 
-.containerDetail{
-    height: 100%;
-}

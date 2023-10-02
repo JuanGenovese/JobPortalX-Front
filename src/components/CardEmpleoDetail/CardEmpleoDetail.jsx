@@ -43,13 +43,13 @@ const CardEmpleoDetail = ({ setValidate, validate, id, CompanyId, title, descrip
   
   return (
     <Card className={style.mainContainer} style={{ width: "100%" }}>
-      <div>
+      <div className={style.ConteinerImgTit}>
         <Card.Img className={style.logo} variant="top" src={company.photo} />
+        <Card.Body className={style.containerTitle}>
+          <Card.Title>{title}</Card.Title>
+          <pre style={{ whiteSpace: "pre-wrap"}}>{description}</pre>
+        </Card.Body>
       </div>
-      <Card.Body className={style.containerTitle}>
-        <Card.Title>{title}</Card.Title>
-        <pre style={{ whiteSpace: "pre-wrap"}}>{description}</pre>
-      </Card.Body>
       <ListGroup className={style.container2}>
         <ListGroup.Item>Jornada: {Workday}</ListGroup.Item>
         <ListGroup.Item>Modalidad: {WorkMethod}</ListGroup.Item>

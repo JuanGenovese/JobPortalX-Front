@@ -41,17 +41,14 @@ const EmpleoDetail = ({ setValidateState, setCurrentUserStore2 }) => {
 
 
   return(
-        <div className={style.mainContainer}>
-          <NavBar setValidateState={setValidateState} setCurrentUserStore2={setCurrentUserStore2} />
-        <div className={style.mainContainer2}>
-          <div className={style.containerEmpleosRel}>
-            <MiniCardEmpleosRel companyId={companyId} setValidate={setValidate} idEmpleoSelected={empleoSelected.id} title={empleoSelected.title}/>   
-          </div>
-          <div className={style.mainContainer3}>
+    <div>
+      <NavBar setValidateState={setValidateState} setCurrentUserStore2={setCurrentUserStore2} />
+      <div className={style.mainContainer2}>
+        <div className={style.mainContainer3}>
           <Tabs
           defaultActiveKey="DETALLE DEL EMPLEO"
           id="justify-tab-example"
-          className="mb-3"
+          className="mb"
           justify
           >
             <Tab eventKey="DETALLE DEL EMPLEO" title="DETALLE DEL EMPLEO">
@@ -77,10 +74,13 @@ const EmpleoDetail = ({ setValidateState, setCurrentUserStore2 }) => {
               </div>
             </Tab>
           </Tabs>
-          </div>
         </div>
+        <div className={style.containerEmpleosRel}>
+          <MiniCardEmpleosRel companyId={companyId} setValidate={setValidate} idEmpleoSelected={empleoSelected.id} title={empleoSelected.title}/>   
+        </div>
+      </div>
     </div>
-    );
+  );
 };
 
 export default EmpleoDetail;
