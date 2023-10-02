@@ -45,7 +45,7 @@ const NavBarCliente = ({ setValidateState, setCurrentUserStore2 }) => {
           <h2 className={style.title}>
             {
             userLocalStorage?.profile === "Admin" 
-            ? (<a href="/">JobPortalX</a>) 
+            ? (<a href="/applicant">JobPortalX</a>) 
             : userLocalStorage?.profile === "applicant" 
               ? (<a href="/Applicant">JobPortalX</a>) 
               : (<a href="/empresa">JobPortalX</a>)
