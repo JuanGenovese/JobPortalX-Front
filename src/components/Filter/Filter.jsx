@@ -63,7 +63,7 @@ const Filter = () => {
         </div>
 
         <div className={style.filterContainer}>
-          <p className={style.p}>Experiencia</p>
+          <p className={style.pSpecial}>Experiencia</p>
           <select
             name="FilerByArea"
             className={style.select}
@@ -83,7 +83,7 @@ const Filter = () => {
         </div>
 
         <div className={style.filterContainer}>
-          <p className={style.p}>Modalidad</p>
+          <p className={style.pSpecial}>Modalidad</p>
           <select
             name="FilterByModalidad"
             className={style.select}

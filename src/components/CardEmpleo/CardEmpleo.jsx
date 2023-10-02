@@ -8,9 +8,7 @@ return (
         <Link className={style.words} to={`/empleoDetail/${props.id}`}>
             <div className={style.mainContainer}>
                 <div className={style.containerInfo}>
-                    <div className={style.imgContainer}>
-                        <img className={style.image} src={props.company?.photo} alt="logo" />
-                    </div>
+                    <img className={style.image} src={props.company?.photo} alt="logo" />
                     <div className={style.descriptionDiv}>
                         <h2 className={style.temps} >{props.title}</h2>
                         <p className={style.description} >{props.description}</p>
@@ -39,7 +37,7 @@ return (
                     </div>
                 </div>
                 <div className={style.containerLastIcons}>
-                    <BsBookmark className={style.icons}/>
+                    <BsBookmark className={style.ultIcon}/>
                     <p className={style.identification}>{props.operation}</p>
                 </div>
             </div>

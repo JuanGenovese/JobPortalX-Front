@@ -3,71 +3,103 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    /* border: solid black 1px ; */
-    border-radius: 7px;
+    border-radius: 15px;
     width: 25vw;
-    height: 68vh;
-    background: #E1ECFC;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-top: 2vh;
+    height: 65vh;
+    background: #325f92;
+    margin-top: 15vh;
+    box-shadow: 4px 10px 10px rgba(0, 0, 0, .8);
 }
+
+.allFilters {
+    height: 100%;
+    width: 100%;
+}
+
 .divInput{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin: 0;
+    height: 14vh;
 }
+
 .input{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    width: 17vw;
-    height: 4vh;
-    border-radius: 7px;
-    border: solid black 1px;
+    width: 16vw;
+    height: 7vh;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-left: 2vw;
+    border: none;
 }
+
 .button2{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
     width: 5vw;
-    height: 4vh;
-    border-radius: 7px;
-    border: solid black 1px;
-    background: var(--battleship);
+    height: 7vh;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: none;
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
     color: #0F0F0F;
-    transition: all 0.3s ease-in-out;
-
-}
-
-.select {
-    border-radius: 3px;
-    background-color: white;
-}
-
-.button {
-    background-color: var(--battleship);
-    width: 15vw;
-    height: 6vh;
-    margin-left: 15%;
 }
 
 .selectSpecial {
     display: flex;
     flex-direction: column;
     text-align: left;
-    /* border: solid black 1px; */
-    /* background-color: aqua; */
-    margin-top: 33px;
+    height: 12vh;
+    color: #ececec;
 }
+
+.pSpecial {
+    margin-left: 2vw;
+    margin-bottom: 1vh;
+    font-size: 1.4rem;
+}
+
+.select {
+    border-radius: 3px;
+    height: 5vh;
+    width: 18vw;
+    margin-left: 3.5vw;
+    border-radius: 25px;
+    background-color: #ececec;
+    border: none;
+    padding-left: 2vw;
+}
+
+.filterContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 12vh;
+    color: #ececec;
+}
+
+.emptyFilters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16vh;
+
+}
+.button {
+    background-color: #ececec;
+    width: 15vw;
+    height: 6vh;
+    border: none;
+    font-weight: bold;
+}
+
+
 
 .cardsContainer {
     display: flex;
@@ -81,19 +113,9 @@
     background-color: aqua;
 }
 
-.allFilters {
-    height: 55vh;
-    width: 22vw;
-}
 
-.filterContainer {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    /* border: solid black 1px; */
-    /* background-color: aqua; */
-    margin-top: 33px;
-}
+
+
 
 .orderContainer {
     display: flex;
@@ -102,139 +124,4 @@
     /* background-color: aqua; */
 }
 
-.emptyFilters {
-    margin-top: 35px;
-}
 
-@media screen and (max-width: 780px) {
-    .mainContainer {
-        align-items: center;
-        width: 93vw;
-        height: 13vh;
-        margin-top: 0vh;
-    }
-
-    .allFilters {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-        width: 90vw;
-        height: 12vh;
-    }
-
-    .filterContainer {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        margin-top: 1vh;
-        width: 17vw;
-        height: 10vh;
-    }
-
-    .select {
-        width: 16vw;
-    }
-
-    .selectSpecial {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        width: 17vw;
-        height: 10vh;
-        margin-top: 1vh;
-    }
-
-    .p {
-        font-size: 0.9rem;
-        font-weight: bold;
-        margin-bottom: 4vh;
-    }
-
-    .pSpecial {
-        font-size: 0.9rem;
-        font-weight: bold;
-    }
-
-    .emptyFilters {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 13vw;
-        height: 10vw;
-        margin-top: 3vh;
-    }
-
-    .button {
-        text-align: center;
-        font-weight: bold;
-        font-size: 0.9rem;
-        width: 13vw;
-        height: 10vw;
-        border-radius: 20%;
-    }
-}
-
-
-@media screen and (max-width: 1900px) {
-
-    .mainContainer {
-        margin-left: 0;
-        margin-right: 0vw;
-        height: 72vh;
-    
-    }
-
-    .allFilters{
-        font-size: 0.95rem;
-    }
-
-    .divInput{
-        margin: 0 0 0 0 ;
-    }
-
-    .input{
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .button2{
-        margin: 0 0 0 0;
-        font-size: 0.75rem;
-    }
-
-    .filterContainer {
-        margin-top: 1.5vh;
-    }
-
-    .selectSpecial {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .orderContainer {
-        width: 80%;
-        text-align: center;
-    }
-
-    .select{
-        width: 80%;
-    }
-
-    .filterContainer{
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    .button{
-        margin: 0 0 0 3.5vw;
-        font-size: 0.75rem;
-    }
-
-    .pSpecial, .p{
-        font-size: 1rem;
-    }
-
-}

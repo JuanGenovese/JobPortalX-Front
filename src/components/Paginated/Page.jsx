@@ -31,10 +31,10 @@ const Page = ({ usersPerPage, users, paginated }) => {
     };
 
     return (
-        <nav>
+        <nav className={style.paginadoConteiner}>
             <ul className={style.paginado}>
                 {currentPage > 1 && (
-                    <li>
+                    <li >
                         <a onClick={() => paginatedHandler(currentPage - 1)}>Prev</a>
                     </li>
                 )}
