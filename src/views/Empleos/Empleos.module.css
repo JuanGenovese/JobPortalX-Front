@@ -1,3 +1,13 @@
+.conteinerPrincipal {
+    background-image: url("/public/images/fondoApplicant.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .filterAndCardsContainer {
     width: 100vw;    
     height: 85vh;

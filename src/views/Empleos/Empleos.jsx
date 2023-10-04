@@ -34,21 +34,22 @@ const Empleos = ({ setCurrentUserStore2, setValidateState }) => {
     }
 
     return (
-        <div>
-            <NavBar setValidateState={setValidateState} setCurrentUserStore2={setCurrentUserStore2}></NavBar>
-            <div className={style.filterAndCardsContainer}>
-                <div className={style.filters}>
-                    <Filter/>
+        <div className={style.conteinerPrincipal}>
+            <div className={style.bg}>
+                <NavBar setValidateState={setValidateState} setCurrentUserStore2={setCurrentUserStore2}></NavBar>
+                <div className={style.filterAndCardsContainer}>
+                    <div className={style.filters}>
+                        <Filter/>
+                    </div>
+                    <div className={style.cardsDiv}>
+                        <CardsContainerEmpleo 
+                            className={style.cards}
+                            vacants={currentCard}
+                            companies={companies}
+                        />
+                    </div>
                 </div>
-                <div className={style.cardsDiv}>
-                    <CardsContainerEmpleo 
-                        className={style.cards}
-                        vacants={currentCard}
-                        companies={companies}
-                    />
-
-                </div>
-            </div>
+            </div>      
         </div>
     )
 };
