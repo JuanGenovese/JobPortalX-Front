@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-height: 87vh;
+  height: 85vh;
+  border: 2px solid white;
 }
 
 .Form {
-  margin: 0.5vh auto;
   background: linear-gradient(0deg, #25476e, #1e3a5a, #172a41);
   color: #e1ecfc;
   width: 60%;

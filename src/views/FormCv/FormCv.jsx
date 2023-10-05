@@ -69,46 +69,46 @@ function FormCv({ setValidateState, setCurrentUserStore2 }) {
        {/* no quitar */}
       </div>
       <div className={style.containerSecond}>
-      <NavBar
-        setValidateState={setValidateState}
-        setCurrentUserStore2={setCurrentUserStore2}
-      ></NavBar>
-
-      <div className={style.circleContainer}>
-        <div
-          className={`${style.circle} ${step === 1 ? style.highlighted : ""}`}
-        />
-        <div
-          className={`${style.circle} ${step === 2 ? style.highlighted : ""}`}
-        />
-      </div>
-
-      <div
-        className={style.container2}
-        style={{ display: "flex", flexDirection: "row" }}
-      >
-        <div style={{ flex: 1 }} className={style.step}>
-          {step === 1 && (
-            <Step1FormCv
-              cv={cv}
-              setCv={setCv}
-              handlerChange={handlerChange}
-              currentUser={currentUser}
-              nextStep={nextStep}
-            />
-          )}
-
-          {step === 2 && (
-            <Step2FormCv
-              cv={cv}
-              setCv={setCv}
-              handlerChange={handlerChange}
-              previousStep={previousStep}
-              nextStep={nextStep}
-            />
-          )}
+        <NavBar
+          setValidateState={setValidateState}
+          setCurrentUserStore2={setCurrentUserStore2}
+        ></NavBar>
+  
+        <div className={style.circleContainer}>
+          <div
+            className={`${style.circle} ${step === 1 ? style.highlighted : ""}`}
+          />
+          <div
+            className={`${style.circle} ${step === 2 ? style.highlighted : ""}`}
+          />
         </div>
-      </div>
+  
+        <div
+          className={style.container2}
+          style={{ display: "flex", flexDirection: "row" }}
+        >
+          <div style={{ flex: 1 }} className={style.step}>
+            {step === 1 && (
+              <Step1FormCv
+                cv={cv}
+                setCv={setCv}
+                handlerChange={handlerChange}
+                currentUser={currentUser}
+                nextStep={nextStep}
+              />
+            )}
+  
+            {step === 2 && (
+              <Step2FormCv
+                cv={cv}
+                setCv={setCv}
+                handlerChange={handlerChange}
+                previousStep={previousStep}
+                nextStep={nextStep}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

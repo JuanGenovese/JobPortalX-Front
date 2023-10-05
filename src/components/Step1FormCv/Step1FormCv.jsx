@@ -116,11 +116,9 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
     return (
 
       <div className={style.mainContainer}>
-        <h2 style={{ 'margin': '40px' }}>Información personal</h2>
-
         <Form className={style.Form} validated={!validated}>
 
-          <Row className="mb-3 ">
+          <Row className="mb">
 
             <FormGroup as={Col} md="6" >
               <Form.Label>DNI</Form.Label>
