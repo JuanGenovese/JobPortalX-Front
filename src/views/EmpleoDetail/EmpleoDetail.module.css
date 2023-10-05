@@ -1,44 +1,13 @@
-.mainContainer2{
+.mainContainer{
     margin-top: 15vh;
     height: 85vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
-.mainContainer3{
-    width: 70vw;
+.empleoConteiner {
     height: 85vh;
+    width: 70vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
-
-.containerDetail{
-    height: 100%;
-    border: 2px solid red;   
-}
-
-.containerEmpleosRel{
-    margin-left: 1%;
-    width: 28%;
-    border: 3px solid var( --caribbean-current);
-    border-radius: 3%;
-    display: flex;
-    flex-direction: column;   
-    overflow-y: scroll;
-    max-height: 100vh;
-    color: var(--caribbean-current);
-    border: 2px solid red;
-    
-}
-
-
-.containerButtons{
-    
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-

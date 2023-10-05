@@ -1,13 +1,14 @@
 .mainContainer{
-    height: 75vh;
+    height: 85vh;
     display: flex;
-    flex-direction: column;
+
 }
 
 .ConteinerImgTit {
     display: flex;
-    flex-direction: row;
-    margin-bottom: 5vh;
+    flex-direction: row; 
+    width: 70vw;
+    border: 2px solid red;
 }
 
 .logo{   
@@ -27,8 +28,10 @@
 }
 
 .container2{
-align-self: baseline;
-width: 100%;
+    align-self: baseline;
+    width: 30vw;
+    border: 2px solid green;
+
 }
 
 

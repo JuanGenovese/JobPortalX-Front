@@ -1,32 +1,39 @@
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
-import style from "./CardEmpleoDetail.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { relationVacantApplicant } from "../../Redux/Actions/actionsFunction/axtionsVacants";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { relationVacantApplicant } from "../../Redux/Actions/actionsFunction/axtionsVacants";
 import { getUserDetail } from "../../Redux/Actions/actionsFunction/actionsUsers";
 import { getCompanyDetail } from "../../Redux/Actions/actionsFunction/actionsCompanys";
+
 import Swal from "sweetalert2";
+import style from "./CardEmpleoDetail.module.css";
 
 const CardEmpleoDetail = ({ setValidate, validate, id, CompanyId, title, description, createdAt, Workday, WorkMethod, Seniority }) => {
   const dispatch = useDispatch();
-  const currentUserId = JSON.parse(localStorage.getItem("currentUser2")).id;
+
   const userVacants = useSelector((state) => state.UserDetail.Vacants);
   const user = useSelector((state) => state.UserDetail);
-  const vacantPostuled = userVacants?.find((vacant) => vacant.id === id);
   const company = useSelector((state) => state.CompanyDetail);
-
+ 
+  const vacantPostuled = userVacants?.find((vacant) => vacant.id === id);
+  const currentUserId = JSON.parse(localStorage.getItem("currentUser2")).id;
+  
   const relationIds = {
     VacantId: id,
     ApplicantId: currentUserId,
   };
 
+
+
   useEffect(() => {
     dispatch(getUserDetail(currentUserId));
     dispatch(getCompanyDetail(CompanyId));
-    if(vacantPostuled) setValidate(true);
+    if (vacantPostuled) {
+      setValidate(true)
+    }
   }, [dispatch]);
+
+
 
   const handlerClick = () => {
     if (!user.Cv){
@@ -35,38 +42,32 @@ const CardEmpleoDetail = ({ setValidate, validate, id, CompanyId, title, descrip
         text: "Debes registrar tu CV para poder postular a una vacante",
         icon: 'error'
       })
-    }else{
-    dispatch(relationVacantApplicant(relationIds));
-    setValidate(true);
+    } else {
+      dispatch( relationVacantApplicant(relationIds) );
+      setValidate(true);
     }
   };
   
   return (
-    <Card className={style.mainContainer} style={{ width: "100%" }}>
+    <div className={style.mainContainer}>
       <div className={style.ConteinerImgTit}>
-        <Card.Img className={style.logo} variant="top" src={company.photo} />
-        <Card.Body className={style.containerTitle}>
-          <Card.Title>{title}</Card.Title>
-          <pre style={{ whiteSpace: "pre-wrap"}}>{description}</pre>
-        </Card.Body>
-      </div>
-      <ListGroup className={style.container2}>
-        <ListGroup.Item>Jornada: {Workday}</ListGroup.Item>
-        <ListGroup.Item>Modalidad: {WorkMethod}</ListGroup.Item>
-        <ListGroup.Item>Seniority: {Seniority}</ListGroup.Item>
-      </ListGroup>
+        <img className={style.logo} variant="top" src={company.photo} />
+        <div className={style.containerTitle}>
+          <h1>{title}</h1>
+          <pre>{description}</pre>
+        </div>
+      </div> 
 
-      <Card.Body>
-        <Button
-          onClick={handlerClick}
-          className={style.btn}
-          variant="outline-success"
-          disabled={validate || vacantPostuled}
-        >
-          {vacantPostuled || validate ? "YA POSTULADO" : "POSTULARME"}
-        </Button>
-      </Card.Body>
-    </Card>
+      <ul className={style.container2}>
+        <li>Jornada: {Workday}</li>
+        <li>Modalidad: {WorkMethod}</li>
+        <li>Seniority: {Seniority}</li>
+      </ul>
+
+      <button className={style.btn} onClick={handlerClick} disabled={validate || vacantPostuled}>
+        {vacantPostuled || validate ? "YA POSTULADO" : "POSTULARME"}
+      </button>
+    </div>
   );
 };
 
