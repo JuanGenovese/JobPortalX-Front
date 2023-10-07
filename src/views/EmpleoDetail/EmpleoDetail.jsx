@@ -45,7 +45,7 @@ const EmpleoDetail = ({ setValidateState, setCurrentUserStore2 }) => {
   };
   
   return(
-    <div>
+    <div className={style.backgroundImage}>
       <NavBar setValidateState={setValidateState} setCurrentUserStore2={setCurrentUserStore2} />
       <div className={style.mainContainer}>
         <div className={style.empleoConteiner}>

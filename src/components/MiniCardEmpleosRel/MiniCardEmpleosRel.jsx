@@ -29,10 +29,10 @@ const MiniCardEmpleosRel = ({ companyId, idEmpleoSelected, title, setValidate}) 
   });
 
   return (
-    <div>
+    <div className={style.componentConteiner}>
       {empleosRelSelected.length === 0 
         ? <p>No hay empleos relacionados</p> 
-        :<div>
+        :<div className={style.mainConteiner}>
           {empleosRelSelected.map( (empleo) => {
             return (
               <div key={empleo.id}>

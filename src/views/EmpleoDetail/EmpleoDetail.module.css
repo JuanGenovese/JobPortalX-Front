@@ -1,13 +1,24 @@
+.backgroundImage {
+    background-image: url("/public/images/fondoApplicant.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
 .mainContainer{
     margin-top: 15vh;
     height: 85vh;
     display: flex;
     flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .empleoConteiner {
     height: 85vh;
-    width: 70vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
 }

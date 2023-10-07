@@ -50,23 +50,27 @@ const CardEmpleoDetail = ({ setValidate, validate, id, CompanyId, title, descrip
   
   return (
     <div className={style.mainContainer}>
-      <div className={style.ConteinerImgTit}>
-        <img className={style.logo} variant="top" src={company.photo} />
+      <img className={style.logo} variant="top" src={company.photo} />
+      <div className={style.noImgConteiner}>
+
         <div className={style.containerTitle}>
           <h1>{title}</h1>
-          <pre>{description}</pre>
+          <p>{description}</p>
         </div>
-      </div> 
 
-      <ul className={style.container2}>
-        <li>Jornada: {Workday}</li>
-        <li>Modalidad: {WorkMethod}</li>
-        <li>Seniority: {Seniority}</li>
-      </ul>
-
-      <button className={style.btn} onClick={handlerClick} disabled={validate || vacantPostuled}>
-        {vacantPostuled || validate ? "YA POSTULADO" : "POSTULARME"}
-      </button>
+        <div className={style.listButtonConteiner}>
+          <ul className={style.list}>
+            <li>Jornada {Workday}</li>
+            <li>Modalidad {WorkMethod}</li>
+            <li>Seniority {Seniority}</li>
+          </ul>
+          <div className={style.conteinerButton}>
+            <button className={style.button} onClick={handlerClick} disabled={validate || vacantPostuled}>
+              {vacantPostuled || validate ? "YA POSTULADO" : "POSTULAR"}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

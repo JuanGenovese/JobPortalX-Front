@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { getCompanyDetail } from '../../Redux/Actions/actionsFunction/actionsCompanys';
-import style from "./CardEmpresaDetail.module.css";
-import { TfiEmail } from "react-icons/tfi";
+
 import StarReview from '../StarsAndReview/starsAndReviews';
-import styles from './CardEmpresaDetail.module.css';
+import style from "./CardEmpresaDetail.module.css";
 
 const CardEmpresaDetail = ({ companyId }) => {
   const dispatch = useDispatch();
@@ -29,28 +29,27 @@ const CardEmpresaDetail = ({ companyId }) => {
 
   return (
     <div className={style.mainContainer}>
-      <div>
-        <img className={style.logo} variant="top" src={company?.photo} />
-      </div>
-      <div>
-        <h1>{company?.business_name}</h1>
-      </div>
-      <ul className={style.container2}>
+      
+      <ul className={style.list}>
         <li>Razón Social: {company?.name}</li>
-        <li><TfiEmail className={style.icon} />{company?.email}</li>
+        <li>Email: {company?.email}</li>
         <li>País: {company?.country}</li>
         <li>CUIT: {company?.cuit}</li>
       </ul>
-      <div>
-        <button className={styles.commentButton} onClick={toggleComments}>
+      
+      <h1 className={style.nombreEmpresa}>{company?.business_name}</h1>
+      
+      <div className={`${style.comentarios} ${showComments ? style.comentariosActive : ""}`}>
+        <button className={`${style.commentButton} ${showComments ? style.commentButtonActive : ""}`} onClick={toggleComments}>
           {showComments ? 'Ocultar comentarios' : 'Mostrar comentarios'}
         </button>
         {showStarsAndUser && (
-          <div>
+          <div className={style.puntajes}>
             {company && <StarReview starsData={company?.Stars} showComments={showComments} companyId={companyId}/>}
           </div>
         )}
       </div>
+
     </div>
   );
 };

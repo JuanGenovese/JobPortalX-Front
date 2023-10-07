@@ -1,51 +1,74 @@
 .mainContainer{
-    height: 85vh;
-    display: flex;
-
+    height: 65vh;
+    display: flex;    
+    color: #ececec;
 }
 
-.ConteinerImgTit {
-    display: flex;
-    flex-direction: row; 
-    width: 70vw;
-    border: 2px solid red;
+.logo {
+    object-fit: cover;
+    width: 20vw;
 }
 
-.logo{   
-    margin-top: 5vh;
-    margin-left: 5vh;
-    width: 25vw;
-    height: 30vh;   
-    
+.noImgConteiner {
+    display: flex;
+    flex-direction: column;
 }
 
 .containerTitle {
+    width: 60vw;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+}
+
+.containerTitle h1 {
+    font-weight: bold;
+}
+
+.containerTitle p {
+    width: 80%;
     text-align: center;
 }
 
-.container2{
-    align-self: baseline;
-    width: 30vw;
-    border: 2px solid green;
-
+.listButtonConteiner{
+    display: flex;
+    height: 25vh;
 }
 
-
-
-
-
-.btn{
-    background-color: var(--oxford-blue);
-    color: white;
-
+.list {
+    height: 25vh;
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
 }
 
-.btn:hover{
-    background-color: white;
-    color: var(--oxford-blue);
-    border-color: var(--oxford-blue);
+.list li {
+    text-align: center;
+}
+
+.conteinerButton{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    height: 10vh;
+    width: 17.5vw;
+    border: none;
+    border-radius: 75px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
 }
