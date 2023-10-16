@@ -33,21 +33,21 @@ const MiniCardEmpleosRel = ({ companyId, idEmpleoSelected, title, setValidate}) 
       {empleosRelSelected.length === 0 
         ? <p>No hay empleos relacionados</p> 
         :<div className={style.mainConteiner}>
+          <h2 className={style.Title}>Vacantes sugeridas</h2>
           {empleosRelSelected.map( (empleo) => {
             return (
-              <div key={empleo.id}>
-                <h2>Vacante sugerida</h2>
-                <div>
-                  <h1>{empleo.title}</h1>
-                  <p>Jornada: {empleo.Workday.name}</p>
-                  <p>Método: {empleo.WorkMethod.name}</p>
+              <div key={empleo.id} className={style.cardConteiner}>
+                <h1 className={style.cardTitle}>{empleo.title}</h1>
+                <p className={style.jornada}>Jornada:</p>
+                <p className={style.jornadaDetail}>{empleo.Workday.name} - {empleo.WorkMethod.name}</p>
+                <div className={style.buttonConteiner}>
                   <Link to={`/empleoDetail/${empleo.id}`}>
-                    <button onClick={ () => {
+                    <button className={style.button} onClick={ () => {
                       dispatch(getVacantDetail(empleo.id))
                       dispatch(getCompanyDetail(companyId))
                       setValidate(false)
                     }}> VER DETALLE </button>
-                  </Link>
+                  </Link>          
                 </div>
               </div>
             )

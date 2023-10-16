@@ -49,7 +49,6 @@ const CardEmpresaDetail = ({ companyId }) => {
           </div>
         )}
       </div>
-
     </div>
   );
 };

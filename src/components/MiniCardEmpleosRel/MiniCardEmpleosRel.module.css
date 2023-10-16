@@ -1,6 +1,63 @@
 .mainConteiner {
     color: #ececec;
     max-width: 20vw;
-    height: 65vh;
+    height: 73vh;
+    overflow: scroll
+}
 
+.Title {
+    height: 12.5vh;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-bottom: 2px solid white;
+}
+.cardConteiner {
+    height: 35vh;
+    width: 80%;
+    margin-left: 10%;
+    border-bottom: 2px solid white;
+}
+
+.cardTitle {
+    height: 30%;
+    padding-top: 1vh;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.jornada {
+    font-size: 1.3rem;
+    margin: 0;
+    margin-left: 1.5vw;
+    height: 10%;
+}
+
+.jornadaDetail {
+    margin: 0;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    font-size: 1.2rem;
+    height: 20%;
+}
+
+.buttonConteiner {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border: none;
+    width: 10vw;
+    height: 4vh;
+    border-radius: 20px;
+    font-size: .9rem;
+    font-weight: bold;
 }

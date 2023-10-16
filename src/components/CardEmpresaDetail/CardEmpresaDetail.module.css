@@ -1,5 +1,5 @@
 .mainContainer{
-    height: 20vh;
+    height: 12.5vh;
     width: 100vw;
     display: flex;
     color: #ececec;
@@ -10,7 +10,7 @@
 
 .list {
     width: 33.33vw;
-    height: 20vh;
+    height: 12.5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,12 +20,13 @@
 
 .list li {
     width: 20vw;
-    text-align:left
+    text-align:left;
+    font-size: 0.7rem;
 }
 
 
 .nombreEmpresa {
-    height: 20vh;
+    height: 12.5vh;
     width: 33.33vw;
     display: flex;
     justify-content: center;
@@ -34,6 +35,7 @@
 
 
 .comentarios{
+    height: 12.5vh;
     width: 33.33vw;
     display: flex;
     flex-direction: column;
@@ -61,7 +63,7 @@
 
 .commentButton:hover {
     transition: 0.3s;
-    transform: translateY(10px);
+    transform: translateX(5px);
 }
 
 .commentButtonActive {

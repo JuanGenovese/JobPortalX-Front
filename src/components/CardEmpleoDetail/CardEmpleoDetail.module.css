@@ -1,5 +1,5 @@
 .mainContainer{
-    height: 65vh;
+    height: 72.5vh;
     display: flex;    
     color: #ececec;
 }
@@ -16,7 +16,7 @@
 
 .containerTitle {
     width: 60vw;
-    height: 40vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,12 +24,17 @@
 }
 
 .containerTitle h1 {
+    margin-top: 5vh;
     font-weight: bold;
 }
 
 .containerTitle p {
+    margin-top: 5vh;
+    height: 50vh;
     width: 80%;
+    display: flex;
     text-align: center;
+    overflow: scroll;
 }
 
 .listButtonConteiner{
@@ -59,7 +64,7 @@
 }
 
 .button {
-    height: 10vh;
+    height: 7.5vh;
     width: 17.5vw;
     border: none;
     border-radius: 75px;
@@ -68,7 +73,7 @@
     transition: 0.3s;
 }
 
-.button:hover {
+.button:active {
     transition: 0.3s;
-    transform: scale(1.2);
+    transform: scale(0.9);
 }
