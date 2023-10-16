@@ -1,6 +1,4 @@
-import { Form, Row, Col, FormGroup, FormLabel, FormControl, FormSelect} from "react-bootstrap";
 import style from "./Step1FormCv.module.css"
-import ButtonGeneral from "../Button/ButtonGeneral";
 import validation from "./validation";
 import Loading from "../Loading/Loading";
 import React, { useState } from "react";
@@ -116,168 +114,127 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
     return (
 
       <div className={style.mainContainer}>
-        <Form className={style.Form} validated={!validated}>
 
-          <Row className="mb">
-
-            <FormGroup as={Col} md="6" >
-              <Form.Label>DNI</Form.Label>
-              <Form.Control
-                name="dni"
-                placeholder="dni"
-                value={cv.dni}
-                onChange={(event) => handlerChange(event, cv, setCv)}
-                type="number"
-                required />
-              <Form.Control.Feedback type="invalid">
-                Rellena este campo.
-              </Form.Control.Feedback>
-            </FormGroup>
-
-            <FormGroup as={Col} md="6" >
-              <FormLabel>Número de celular</FormLabel>
-              <Form.Control
-                name="phone"
-                placeholder="Número de celular"
-                value={cv.phone}
-                onChange={(event) => handlerChange(event, cv, setCv)}
-                type="text"
-                required />
-              <Form.Control.Feedback type="invalid">
-                Rellena este campo
-              </Form.Control.Feedback>
-            </FormGroup>
-
-          </Row>
-
-
-
-
-
-          <Row className="mb-3" >
-
-            <FormGroup as={Col} md="6" >
-              <FormLabel>Dirección</FormLabel>
-              <FormControl
-                name="address"
-                placeholder="Dirección"
-                value={cv.address}
-                onChange={(event) => handlerChange(event, cv, setCv)}
-                type="text"
-                required />
-              <Form.Control.Feedback type="invalid">
-                Rellena este campo
-              </Form.Control.Feedback>
-            </FormGroup>
-
-
-            <FormGroup as={Col} md="6" >
-              <FormLabel>LinkedIn o sitio web</FormLabel>
-              <FormControl
-                name="linkedin"
-                placeholder="ej: https://www.linkedin.com/usuario"
-                value={cv.linkedin}
-                onChange={(event) => handlerChange(event, cv, setCv, setValidatedLinkedin)}
-                type="text"
-                required />
-
-              <Form.Control.Feedback type="invalid">
-                Rellena este campo
-              </Form.Control.Feedback>
-
+        <form className={style.Form} validated={!validated}>
+          <div className={style.firstRow}>
+            
+            <div className={style.dniNum}>
+              <div className={style.dni}>
+                <h3>DNI</h3>
+                <input 
+                  placeholder="dni"
+                  value={cv.dni}
+                  onChange={(event) => handlerChange(event, cv, setCv)}
+                  type="number"
+                />
+              </div>
+  
+              <div>
+                <h3>Número de celular</h3>
+                <input
+                  placeholder="Número de celular"
+                  value={cv.phone}
+                  onChange={(event) => handlerChange(event, cv, setCv)}
+                  type="text"
+                />
+              </div>
+            </div>
+  
+            <div className={style.dirLinkdn}>
+              <div>
+                <h3>Dirección</h3>
+                <input
+                  placeholder="Dirección"
+                  value={cv.address}
+                  onChange={(event) => handlerChange(event, cv, setCv)}
+                  type="text"
+                />
+              </div>
+  
+  
+              <div>
+                <h3>LinkedIn o sitio web</h3>
+                <input
+                  placeholder="ej: https://www.linkedin.com/usuario"
+                  value={cv.linkedin}
+                  onChange={(event) => handlerChange(event, cv, setCv, setValidatedLinkedin)}
+                  type="text"
+                />
                 {!validatedLinkedin ? (
                  <div className={style.linkedinError}>Error en Linkedin: la URL debe iniciar por https://</div>
                 ): 
                 (console.log("ok"))
                 }
-              
-            </FormGroup>
-
-          </Row>
-
-
-
-
-
-          <Row>
-            <Col md={6}>
-              <div style={{ display: 'flex', alignItems: 'start', flexDirection: 'column' }}>
-                <FormLabel style={{ marginRight: '10px' }}>Foto</FormLabel>
-
-                <div className={!image ? style.dropzone : 'none'}>
-                  <Dropzone onDrop={handleDrop}>
-                    {({ getRootProps, getInputProps }) => (
-                      <div {...getRootProps()}>
-                        <input {...getInputProps()} />
-
-                        {!image ? <p style={{ 'color': 'gray', 'textAlign': 'center' }}>Selecciona o arrastra una imagen</p> : <></>}
-                      </div>
-                    )}
-                  </Dropzone>
-                </div>
-
-                {image && (
-                  <div> 
-                    <img className={style.image} src={image} alt="Imagen cargada" />
-                    <button className={style.buttonCont}  style={{ margin: "10px" }} onClick={(event) => handleRemove(event)}>
-									  <BsFillTrashFill />
-									  <span className={style.tooltip}>Eliminar</span>
-									</button>
-									<button className={style.buttonCont} onClick={(event) => handleUpload(event)}>
-									  <BsCheckCircleFill />
-									  <span className={style.tooltip}>Subir</span>
-									</button>
-                  </div>
-                )}
               </div>
-            </Col>
+  
+            </div>
+          </div>
+            
 
-            <Col md={6}>
-              <FormGroup>
-                <FormLabel>Fecha de nacimiento</FormLabel>
-                <FormControl
-                  name='initial_date'
+
+
+
+          <div className={style.imgNac}>
+            <div>
+              <h3>Foto</h3>
+              <div className={!image ? style.dropzone : 'none'}>
+                <Dropzone onDrop={handleDrop}>
+                  {({ getRootProps, getInputProps }) => (
+                    <div {...getRootProps()}>
+                      <input {...getInputProps()} />
+                      {!image ? <p style={{ 'color': 'gray', 'textAlign': 'center' }}>Selecciona o arrastra una imagen</p> : <></>}
+                    </div>
+                  )}
+                </Dropzone>
+              </div>
+              {image && (
+                <div> 
+                  <img className={style.image} src={image} alt="Imagen cargada" />
+                  <button className={style.buttonCont}  style={{ margin: "10px" }} onClick={(event) => handleRemove(event)}>
+								  <BsFillTrashFill />
+								  <span className={style.tooltip}>Eliminar</span>
+								</button>
+								<button className={style.buttonCont} onClick={(event) => handleUpload(event)}>
+								  <BsCheckCircleFill />
+								  <span className={style.tooltip}>Subir</span>
+								</button>
+                </div>
+              )}
+            </div>
+
+            <div>
+              <div>
+                <h3>Fecha de nacimiento</h3>
+                <input
                   placeholder='Página web'
                   value={cv.initial_date}
                   type="date"
                   onChange={(event) => handlerChange(event, cv, setCv)}
-                  required />
-                <Form.Control.Feedback type="invalid">
-                  Rellena este campo.
-                </Form.Control.Feedback>
-              </FormGroup>
+                />
+              </div>
 
-              <FormGroup  >
-                <FormLabel>Nacionalidad</FormLabel>
-                <FormSelect
+              <div>
+                <h3>Nacionalidad</h3>
+                <select
                   name='country'
                   value={cv.country}
                   onChange={(event) => handlerChange(event, cv, setCv)}
                   required>
                   <option disabled></option>
                   {countriesNames.map((count) => <option id={count.emoji} value={count.name}>{count.name}</option>)}
-                </FormSelect>
-                <Form.Control.Feedback type="invalid">
-                  Seleciona una opcion.
-                </Form.Control.Feedback>
-              </FormGroup>
-            </Col>
+                </select>
+              </div>
+            </div>
+          </div>
 
+        </form>
 
-
-          </Row>
-
-        </Form>
-
-
-        <div style={{ margin: '5px', padding: '1' }}>
-          <FormGroup as={Col} md="6" className="mb-5">
-            <ButtonGeneral
+          <div className={style.button}>
+            <button
               textButton="Siguiente"
               handlerClick={(event) => handleNext(event)}
             />
-          </FormGroup>
-        </div>
+          </div>
 
       </div>
     )
@@ -285,41 +242,3 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
 }
 
 export default Step1FormCv
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-
-//   return (
-//     <div>
-//       <Dropzone onDrop={handleDrop}>
-//         {({ getRootProps, getInputProps }) => (
-//           <div {...getRootProps()}>
-//             <input {...getInputProps()} />
-//             <p>
-//               Arrastra y suelta la imagen aquí, o haz clic para seleccionar un archivo
-//             </p>
-//           </div>
-//         )}
-//       </Dropzone>
-//       {image && (
-//         <div>
-//           <img src={image} alt="Imagen cargada" />
-//           <button onClick={handleRemove}>Eliminar imagen</button>
-//           <button onClick={handleUpload}>Subir imagen</button>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
