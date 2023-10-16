@@ -1,3 +1,15 @@
+.componentConteiner{    
+    color: #ececec;
+}
+
+.componentParrafo{
+    height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .mainConteiner {
     color: #ececec;
     max-width: 20vw;
