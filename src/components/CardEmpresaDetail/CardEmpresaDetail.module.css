@@ -41,14 +41,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .comentariosActive {
-    width: 33.33vw;
-    margin-top: 7vh;
-    justify-content: flex-end;
-    align-items: flex-start;
+    height: 85vh;
+    width: 35vw;
+    position: fixed;
+    top: 15vh;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #25476e;
+    overflow: scroll;
 }
 
 .commentButton {
@@ -63,7 +69,7 @@
 
 .commentButton:hover {
     transition: 0.3s;
-    transform: translateX(5px);
+    transform: translateY(-10px);
 }
 
 .commentButtonActive {
@@ -71,11 +77,11 @@
 }
 
 .commentButtonActive:hover {
-    transform: translateY(-10px);
+    transform: translateY(10px);
 }
 
 .puntajes {
-    height: 75vh;
-    width: 33.33vw;
+    width: 30vw;
+    height: 70vh;
     background-color: #25476e;
 }
