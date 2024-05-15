@@ -12,30 +12,89 @@
 .firstRow {
   display: flex;
   flex-direction: row;
+  color: #ececec;
 }
 
 .dniNum {
-  border: 2px solid red;
   height: 25vh;
   width: 30vw;
+}
+
+.dniNum h4 {
+  font-size: 1.1rem;
+}
+
+.dni{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 50%;
+}
+
+.num {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 50%;
+}
+
+.input {
+  width: 25vw;
+  height: 5vh;
+  border: none;
+  border-radius: 75px;
+  padding-left: 1.5vw;
 }
 
 .dirLinkdn {
-  border: 2px solid green;
   height: 25vh;
   width: 30vw;
 }
 
+.dirLinkdn h4 {
+  font-size: 1.1rem;
+}
+
+.dir {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 50%;
+}
+
+.Linkdn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 50%;
+}
+
 .imgNac {
-  border: 2px solid yellow;
+  margin-top: 2vw;
   height: 25vh;
   display: flex;
+  color: #ececec;
+}
+
+.FechaNacionalidad {
+  width: 75vh;
+  margin-left: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .dropzone {
-  border: 2px solid red;
-  height: 10vw;
-  width: 10vw;
+  border: 2px solid gray;
+  height: 25vh;
+  width: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {

@@ -112,26 +112,27 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
 
 
     return (
-
       <div className={style.mainContainer}>
 
         <form className={style.Form} validated={!validated}>
+
           <div className={style.firstRow}>
-            
             <div className={style.dniNum}>
               <div className={style.dni}>
-                <h3>DNI</h3>
+                <h4>D.N.I.</h4>
                 <input 
-                  placeholder="dni"
+                  className={style.input}
+                  placeholder="D.N.I."
                   value={cv.dni}
                   onChange={(event) => handlerChange(event, cv, setCv)}
                   type="number"
                 />
               </div>
   
-              <div>
-                <h3>Número de celular</h3>
+              <div className={style.num}>
+                <h4>Número de celular</h4>
                 <input
+                  className={style.input}
                   placeholder="Número de celular"
                   value={cv.phone}
                   onChange={(event) => handlerChange(event, cv, setCv)}
@@ -141,9 +142,10 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
             </div>
   
             <div className={style.dirLinkdn}>
-              <div>
-                <h3>Dirección</h3>
+              <div className={style.dir}>
+                <h4>Dirección</h4>
                 <input
+                  className={style.input}
                   placeholder="Dirección"
                   value={cv.address}
                   onChange={(event) => handlerChange(event, cv, setCv)}
@@ -152,9 +154,10 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
               </div>
   
   
-              <div>
-                <h3>LinkedIn o sitio web</h3>
+              <div className={style.Linkdn}>
+                <h4>LinkedIn o sitio web</h4>
                 <input
+                  className={style.input}
                   placeholder="ej: https://www.linkedin.com/usuario"
                   value={cv.linkedin}
                   onChange={(event) => handlerChange(event, cv, setCv, setValidatedLinkedin)}
@@ -176,7 +179,6 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
 
           <div className={style.imgNac}>
             <div>
-              <h3>Foto</h3>
               <div className={!image ? style.dropzone : 'none'}>
                 <Dropzone onDrop={handleDrop}>
                   {({ getRootProps, getInputProps }) => (
@@ -202,9 +204,9 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
               )}
             </div>
 
-            <div>
+            <div className={style.FechaNacionalidad}>
               <div>
-                <h3>Fecha de nacimiento</h3>
+                <h4>Fecha de nacimiento</h4>
                 <input
                   placeholder='Página web'
                   value={cv.initial_date}
@@ -214,7 +216,7 @@ function Step1FormCv({ cv, setCv, handlerChange, nextStep, currentUser }) {
               </div>
 
               <div>
-                <h3>Nacionalidad</h3>
+                <h4>Nacionalidad</h4>
                 <select
                   name='country'
                   value={cv.country}
